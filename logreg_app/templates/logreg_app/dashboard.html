@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Page</title>
+</head>
+<body>
+
+    {% if user.is_authenticated %}
+    <h1>This is Dashboard Page!!!</h1>
+    <h2>Hello {{ fname }}</h2>
+    <h3>You are Logged In Successfully.</h3>
+    <br>
+    <button type="submit"><a href="/logout">Logout</a></button>
+    {% else %}
+    <h1>Hello Login First!!!</h1>
+    <button type="submit"><a href="/login">Login</a></button>
+    <button type="submit"><a href="/register">Register</a></button>
+    {% endif %}
+</body>
+</html>
